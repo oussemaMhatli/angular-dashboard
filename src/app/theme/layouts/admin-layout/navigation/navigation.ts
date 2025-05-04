@@ -33,96 +33,37 @@ export const NavigationItems: NavigationItem[] = [
         url: '/dashboard',
         icon: 'dashboard',
         breadcrumbs: false
-      }
-    ]
-  },
-  {
-    id: 'authentication',
-    title: 'Authentication',
-    type: 'group',
-    icon: 'icon-navigation',
-    children: [
-      {
-        id: 'login',
-        title: 'Login',
+      },
+ {
+        id: 'default',
+        title: 'product',
         type: 'item',
         classes: 'nav-item',
-        url: '/login',
-        icon: 'login',
-        target: true,
+        url: '/product',
+        icon: 'product',
         breadcrumbs: false
       },
-      {
-        id: 'register',
-        title: 'Register',
+ {
+        id: 'default',
+        title: 'reservation',
         type: 'item',
         classes: 'nav-item',
-        url: '/register',
-        icon: 'profile',
-        target: true,
+        url: '/reservation',
+        icon: 'reservation',
         breadcrumbs: false
-      }
-    ]
-  },
-  {
-    id: 'utilities',
-    title: 'UI Components',
-    type: 'group',
-    icon: 'icon-navigation',
-    children: [
-      {
-        id: 'typography',
-        title: 'Typography',
-        type: 'item',
-        classes: 'nav-item',
-        url: '/typography',
-        icon: 'font-size'
       },
-      {
-        id: 'color',
-        title: 'Colors',
+ {
+        id: 'default',
+        title: 'modeling',
         type: 'item',
         classes: 'nav-item',
-        url: '/color',
-        icon: 'bg-colors'
+        url: '/modeling',
+        icon: 'modeling',
+        breadcrumbs: false
       },
-      {
-        id: 'tabler',
-        title: 'Tabler',
-        type: 'item',
-        classes: 'nav-item',
-        url: 'https://ant.design/components/icon',
-        icon: 'ant-design',
-        target: true,
-        external: true
-      }
+
     ]
   },
 
-  {
-    id: 'other',
-    title: 'Other',
-    type: 'group',
-    icon: 'icon-navigation',
-    children: [
-      {
-        id: 'sample-page',
-        title: 'Sample Page',
-        type: 'item',
-        url: '/sample-page',
-        classes: 'nav-item',
-        icon: 'chrome'
-      },
-      {
-        id: 'document',
-        title: 'Document',
-        type: 'item',
-        classes: 'nav-item',
-        url: 'https://codedthemes.gitbook.io/mantis-angular/',
-        icon: 'question',
-        target: true,
-        external: true
-      }
-    ]
-  }
+
 ];

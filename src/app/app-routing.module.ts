@@ -32,7 +32,22 @@ const routes: Routes = [
     children: [
       {
         path: 'dashboard',
-        loadComponent: () => import('./sideBar/dashboard/dashboard.component').then((c) => c.DashboardComponent)
+        loadComponent: () => import('../app/components/dashbord-bc/dashbord-bc.component').then((c) => c.DashbordBcComponent)
+
+      },
+{
+        path: 'reservation',
+        loadComponent: () => import('../app/components/reservation/reservation.component').then((c) => c.ReservationComponent)
+
+      },
+{
+        path: 'product',
+        loadComponent: () => import('../app/components/product/product.component').then((c) => c.ProductComponent)
+
+      },
+{
+        path: 'modeling',
+        loadComponent: () => import('../app/components/modeling/modeling.component').then((c) => c.ModelingComponent)
 
       },
     ]

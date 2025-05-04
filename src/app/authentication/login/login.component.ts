@@ -1,16 +1,17 @@
-// angular import
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms'; // Needed for ngModel
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [RouterModule],
+  imports: [RouterModule, FormsModule],
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
 export default class LoginComponent {
-  // public method
+  selectedAccountType: string = 'customer'; // default selection
+
   SignInOptions = [
     {
       image: 'assets/images/authentication/google.svg',
@@ -25,4 +26,12 @@ export default class LoginComponent {
       name: 'Facebook'
     }
   ];
+
+  constructor(private router: Router) {}
+
+  login(): void {
+      this.router.navigate(['/dashboard']);
+      localStorage.setItem('userType', this.selectedAccountType);
+      console.log(this.selectedAccountType);
+  }
 }
